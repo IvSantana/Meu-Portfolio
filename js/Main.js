@@ -11,14 +11,17 @@
     };
     spinner();
     
+    
     // Initiate the wowjs
     new WOW().init();
+
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
         time: 2000
     });
+
 
     // Typed Initiate
     if ($('.typed-text-output').length == 1) {
@@ -32,6 +35,7 @@
         });
     }
 
+
     // Smooth scrolling to section
     $(".btn-scroll").on('click', function (event) {
         if (this.hash !== "") {
@@ -43,12 +47,14 @@
         }
     });
     
+    
     // Skills
     $('.skill').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
+
 
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
@@ -59,8 +65,9 @@
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
 
-        portfolioIsotope.isotope({ filter: $(this).data('filter') });
+        portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
+
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -71,6 +78,7 @@
         items: 1
     });
     
+    
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -80,7 +88,8 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
 })(jQuery);
+
